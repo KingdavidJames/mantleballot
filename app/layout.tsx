@@ -1,9 +1,13 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Albert_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] })
+const albertSans = Albert_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"], // or use "variable" for full range
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Ballot - Decentralized Voting Platform",
@@ -19,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={albertSans.className}>{children}</body>
     </html>
   )
 }
